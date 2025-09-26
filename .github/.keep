@@ -1,0 +1,24 @@
+shares = 1000
+buy_price = 32.87
+sell_price = 33.92
+
+paid = shares * buy_price
+buy_commission = paid * 0.02
+
+sold = shares * sell_price
+sell_commission = sold * 0.02
+
+profit = (sold - sell_commission) - (paid + buy_commission)
+
+print("Paid for stock: $", round(paid, 2))
+print("Buy commission: $", round(buy_commission, 2))
+print("Sold for: $", round(sold, 2))
+print("Sell commission: $", round(sell_commission, 2))
+print("Profit/Loss: $", round(profit, 2))
+
+if profit > 0:
+    print("Joe made a profit.")
+elif profit < 0:
+    print("Joe lost money.")
+else:
+    print("Joe broke even.")
